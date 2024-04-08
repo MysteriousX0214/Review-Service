@@ -1,7 +1,7 @@
 <h1>A backend system for review service using Golang.<h1>
 
-##QuickView For Codes
-**review-service**:providing Remote Process Calls for users, stores and audits.<br>
+<h2>QuickView For Codes</h2>
+__review-service__:providing Remote Process Calls for users, stores and audits.<br>
 **service for users**: not inplemented serperately, http apis and grpc.<br>
 **service for shops**: review-b.<br>
 **service for audits**: review-o.<br>
