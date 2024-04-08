@@ -1,5 +1,5 @@
 # A backend system for review service using Golang.
-
+The project is the modified version of Qimi's online courses. If there is any inferingement, please contact me for deletion.
 ## QuickView For Codes
 
 **review-service**:providing Remote Process Calls for users, stores and audits.
@@ -24,7 +24,9 @@
 ```
   go get github.com/segmentio/kafka-go
 ```
+see tutorial in https://www.liwenzhou.com/posts/Go/kafka-go/ to setup kafka,zookeeper and kafka-ui in Docker
 ###### ElasticSearch(In Docker):
 ```
   go get github.com/elastic/go-elasticsearch/v8@latest
+see tutorial in https://www.liwenzhou.com/posts/Go/elasticsearch/ to setup elasticsearch and Kibana in Docker
 ```
