@@ -3,10 +3,12 @@ The project is the modified version of Qimi's online courses. If there is any in
 Course Address： [course address](https://study.163.com/course/courseMain.htm?courseId=1212937804)
 ## QuickView For Codes
 **review-service**:providing Remote Process Calls for users, stores and audits.
+
 supported methods:
 - Detailed logics of all methods in **service for users/shops/audits**, http apis and remote process calls are provided.
  
 **service for users**: not inplemented serperately, http apis and grpc methods are written in **review-service**.
+
 supported methods:
 - create review
 - update review
@@ -15,6 +17,7 @@ supported methods:
 - see all reviews created by someone
 
 **service for shops**: review-b.
+
 supported methods:(remote calls in **review-serice**)
 - create for reply
 - update for reply
