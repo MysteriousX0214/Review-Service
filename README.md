@@ -9,7 +9,7 @@
 <h6>Kratos:</h6>
   ```
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
-  ```<br>
+<br>
 <h6>MySQL(Local)</h6>:v8.1.0<br>
 <h6>Redis(Local)</h6>:v.3.2.100<br>
 <h6>Docker<h6>: find a suitable version in https://www.docker.com/, you need create a account first.<br>
