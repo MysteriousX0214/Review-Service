@@ -38,7 +38,7 @@ supported methods:(remote calls in **review-service**)
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
   ```
 ###### MySQL(Local):v8.1.0
-Suggest to setup data tables in your MySQL first (review_info,review_reply_info and review_appeal_info), see review-service/review.sql for details.  
+Suggest to setup data tables in your MySQL first (review_info,review_reply_info and review_appeal_info), see [.sql file](https://github.com/MysteriousX0214/Review-Service/blob/master/review-service/review.sql) for details.  
 ###### Redis(Local):v.3.2.100
 (**unimplemented**) Add cache to redis when querying for reviews.
 ###### Docker(Local): 
