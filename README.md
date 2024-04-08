@@ -5,7 +5,9 @@ Course Address： [course address](https://study.163.com/course/courseMain.htm?c
 **review-service**:providing Remote Process Calls for users, stores and audits.
 
 supported methods:
-- Detailed logics of all methods in **service for users/shops/audits**, http apis and remote process calls are provided.
+- Detailed logics of all methods in **service for users/shops/audits**, http apis and remote process calls are provided
+- select reviews from elasticsearch by storeID.
+- select reviews from elasticsearch with not null comments.
  
 **service for users**: not inplemented serperately, http apis and grpc methods are written in **review-service**.
 
@@ -28,6 +30,8 @@ supported methods:(remote calls in **review-serice**)
 - audit for reviews
 - audit for appeals
 
+**read messages from kafka into elasticsearch**:review-job.
+
 ## Necessary Environments:
 ###### Kratos:
   ```
@@ -35,14 +39,15 @@ supported methods:(remote calls in **review-serice**)
   ```
 ###### MySQL(Local):v8.1.0
 ###### Redis(Local):v.3.2.100
-###### Docker(Local): find a suitable version in https://www.docker.com/, you need create a account first.
+###### Docker(Local): 
+Find a suitable version in https://www.docker.com/, you need to create a account first.
 ###### Consul(In Docker):
 ```
 git clone https://github.com/hashicorp/learn-consul-docker.git
 cd datacenter-deploy-service-discovery
 docker-compose up -d
 ```
-or view https://www.liwenzhou.com/posts/Go/consul/ for details
+Or view https://www.liwenzhou.com/posts/Go/consul/ for details
 ###### Canal(In Docker): 
 ```
   docker pull canal/canal-server:latest
@@ -52,9 +57,12 @@ or view https://www.liwenzhou.com/posts/Go/consul/ for details
 ```
   go get github.com/segmentio/kafka-go
 ```
-see tutorial in https://www.liwenzhou.com/posts/Go/kafka-go/ to setup kafka,zookeeper and kafka-ui in Docker
+See tutorial in https://www.liwenzhou.com/posts/Go/kafka-go/ to setup kafka,zookeeper and kafka-ui in Docker
 ###### ElasticSearch(In Docker):
 ```
   go get github.com/elastic/go-elasticsearch/v8@latest
-see tutorial in https://www.liwenzhou.com/posts/Go/elasticsearch/ to setup elasticsearch and Kibana in Docker
 ```
+See tutorial in https://www.liwenzhou.com/posts/Go/elasticsearch/ to setup elasticsearch and Kibana in Docker
+###### Postman(Local,Optional):
+To test if http apis and grpcs works well.
+Find a suitable version in https://www.postman.com/, you may need to create an account for convinent use (like storing a certain http/grpc request route for multiplexing).
