@@ -33,7 +33,7 @@ supported methods:(remote calls in **review-service**)
 **read messages from kafka into elasticsearch**:review-job.
 
 ## Necessary Environments:
-#### Kratos:
+#### Kratos(Go Environment):
   ```
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
   ```
@@ -55,7 +55,7 @@ Or view [link](https://www.liwenzhou.com/posts/Go/consul/) for details
   docker pull canal/canal-server:latest
   docker run -d --name canal-server -p 11111:11111 canal/canal-server
 ```
-#### Kafka(In docker):
+#### Kafka(In Docker):
 ```
   go get github.com/segmentio/kafka-go
 ```
