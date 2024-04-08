@@ -33,38 +33,38 @@ supported methods:(remote calls in **review-service**)
 **read messages from kafka into elasticsearch**:review-job.
 
 ## Necessary Environments:
-###### Kratos:
+#### Kratos:
   ```
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
   ```
-###### MySQL(Local):v8.1.0
+#### MySQL(Local):v8.1.0
 Suggest to setup data tables in your MySQL first (review_info,review_reply_info and review_appeal_info), see [.sql file](https://github.com/MysteriousX0214/Review-Service/blob/master/review-service/review.sql) for details.  
-###### Redis(Local):v.3.2.100
+#### Redis(Local):v.3.2.100
 (**unimplemented**) Add cache to redis when querying for reviews.
-###### Docker(Local): 
+#### Docker(Local): 
 Find a suitable version in https://www.docker.com/, you need to create a account first.
-###### Consul(In Docker):
+#### Consul(In Docker):
 ```
 git clone https://github.com/hashicorp/learn-consul-docker.git
 cd datacenter-deploy-service-discovery
 docker-compose up -d
 ```
 Or view [link](https://www.liwenzhou.com/posts/Go/consul/) for details
-###### Canal(In Docker): 
+#### Canal(In Docker): 
 ```
   docker pull canal/canal-server:latest
   docker run -d --name canal-server -p 11111:11111 canal/canal-server
 ```
-###### Kafka(In docker):
+#### Kafka(In docker):
 ```
   go get github.com/segmentio/kafka-go
 ```
 See tutorial in [link](https://www.liwenzhou.com/posts/Go/kafka-go/) to setup kafka,zookeeper and kafka-ui in Docker
-###### ElasticSearch(In Docker):
+#### ElasticSearch(In Docker):
 ```
   go get github.com/elastic/go-elasticsearch/v8@latest
 ```
 See tutorial in [link](https://www.liwenzhou.com/posts/Go/elasticsearch/) to setup elasticsearch and Kibana in Docker
-###### Postman(Local,Optional):
+#### Postman(Local,Optional):
 To test if http apis and grpcs works well.
 Find a suitable version in https://www.postman.com/, you may need to create an account for convinent use (like storing a certain http/grpc request route for multiplexing).
