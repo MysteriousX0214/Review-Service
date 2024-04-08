@@ -49,7 +49,7 @@ git clone https://github.com/hashicorp/learn-consul-docker.git
 cd datacenter-deploy-service-discovery
 docker-compose up -d
 ```
-Or view https://www.liwenzhou.com/posts/Go/consul/ for details
+Or view [link](https://www.liwenzhou.com/posts/Go/consul/) for details
 ###### Canal(In Docker): 
 ```
   docker pull canal/canal-server:latest
@@ -59,12 +59,12 @@ Or view https://www.liwenzhou.com/posts/Go/consul/ for details
 ```
   go get github.com/segmentio/kafka-go
 ```
-See tutorial in https://www.liwenzhou.com/posts/Go/kafka-go/ to setup kafka,zookeeper and kafka-ui in Docker
+See tutorial in [link](https://www.liwenzhou.com/posts/Go/kafka-go/) to setup kafka,zookeeper and kafka-ui in Docker
 ###### ElasticSearch(In Docker):
 ```
   go get github.com/elastic/go-elasticsearch/v8@latest
 ```
-See tutorial in https://www.liwenzhou.com/posts/Go/elasticsearch/ to setup elasticsearch and Kibana in Docker
+See tutorial in [link](https://www.liwenzhou.com/posts/Go/elasticsearch/) to setup elasticsearch and Kibana in Docker
 ###### Postman(Local,Optional):
 To test if http apis and grpcs works well.
 Find a suitable version in https://www.postman.com/, you may need to create an account for convinent use (like storing a certain http/grpc request route for multiplexing).
