@@ -35,7 +35,7 @@ supported methods:(remote calls in **review-serice**)
   ```
 ###### MySQL(Local):v8.1.0
 ###### Redis(Local):v.3.2.100
-###### Docker: find a suitable version in https://www.docker.com/, you need create a account first.
+###### Docker(Local): find a suitable version in https://www.docker.com/, you need create a account first.
 ###### Consul(In Docker):
 ```
 git clone https://github.com/hashicorp/learn-consul-docker.git
