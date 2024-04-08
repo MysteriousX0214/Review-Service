@@ -5,9 +5,7 @@
 - service for shops: review-b
 - service for audits: review-o
 ##Necessary Environments:
-1.Kratos:```
-go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
-  ```
+1.Kratos:```go install github.com/go-kratos/kratos/cmd/kratos/v2@latest```
 2.MySQL(Local):v8.1.0
 3.Redis(Local):v.3.2.100
 4.Docker: https://www.docker.com/
