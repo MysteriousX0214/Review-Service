@@ -4,7 +4,7 @@ Course Address： [course address](https://study.163.com/course/courseMain.htm?c
 ## QuickView For Codes
 **review-service**:providing Remote Process Calls for users, stores and audits.
 
-**service for users**: not inplemented serperately, http apis and grpc.
+**service for users**: not inplemented serperately, http apis and grpc methods are written in **review-service**.
 
 **service for shops**: review-b.
 
