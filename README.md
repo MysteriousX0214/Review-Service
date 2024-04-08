@@ -9,10 +9,11 @@
 2.MySQL(Local):v8.1.0<br>
 3.Redis(Local):v.3.2.100<br>
 4.Docker: find a suitable version in https://www.docker.com/, you need create a account first.<br>
-5:Consul(In Docker):``` ```
+5:Consul(In Docker):``` ```<br>
 6.Canal(In Docker):```
   docker pull canal/canal-server:latest
-  docker run -d --name canal-server -p 11111:11111 canal/canal-server```<br>
+  docker run -d --name canal-server -p 11111:11111 canal/canal-server
+  ```<br>
 7.Kafka(In docker):```
   go get github.com/segmentio/kafka-go
 ```<br>
