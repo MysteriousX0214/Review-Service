@@ -16,10 +16,10 @@
 <h6>Docker<h6>: find a suitable version in https://www.docker.com/, you need create a account first.<br>
 <h6>Consul(In Docker)</h6>:
 <h6>Canal(In Docker)</h6>:
-```
+`
   docker pull canal/canal-server:latest
   docker run -d --name canal-server -p 11111:11111 canal/canal-server
-```
+`
   <br>
 <h6>Kafka(In docker)</h6>:
 ```
