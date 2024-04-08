@@ -20,13 +20,13 @@ supported methods:
 
 **service for shops**: review-b.
 
-supported methods:(remote calls in **review-serice**)
+supported methods:(remote calls in **review-service**)
 - create for reply
 - update for reply
 - appeal for reply
 
 **service for audits**: review-o.
-supported methods:(remote calls in **review-serice**)
+supported methods:(remote calls in **review-service**)
 - audit for reviews
 - audit for appeals
 
@@ -38,7 +38,9 @@ supported methods:(remote calls in **review-serice**)
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
   ```
 ###### MySQL(Local):v8.1.0
+Suggest to setup data tables in your MySQL first (review_info,review_reply_info and review_appeal_info), see review-service/review.sql for details.  
 ###### Redis(Local):v.3.2.100
+(**unimplemented**) Add cache to redis when querying for reviews.
 ###### Docker(Local): 
 Find a suitable version in https://www.docker.com/, you need to create a account first.
 ###### Consul(In Docker):
