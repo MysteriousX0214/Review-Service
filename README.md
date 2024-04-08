@@ -42,7 +42,7 @@ Suggest to setup data tables in your MySQL first (review_info,review_reply_info 
 #### Redis(Local):v.3.2.100
 (**unimplemented**) Add cache to redis when querying for reviews.
 #### Docker(Local): 
-Find a suitable version in https://www.docker.com/, you need to create a account first.
+Find a suitable version in [docker official website](https://www.docker.com/), you need to create a account first.
 #### Consul(In Docker):
 ```
 git clone https://github.com/hashicorp/learn-consul-docker.git
