@@ -5,24 +5,24 @@
 - **service for shops**: review-b.<br>
 - **service for audits**: review-o.<br>
 <h2>Necessary Environments:</h2>
-<h3>Kratos:</h3>
+h6Kratos:</h6>
   ```
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
   ```<br>
-<h3>MySQL(Local)</h3>:v8.1.0<br>
-<h3>Redis(Local)</h3>:v.3.2.100<br>
-<h3>Docker<h3>: find a suitable version in https://www.docker.com/, you need create a account first.<br>
-<h3>Consul(In Docker)</h3>:
-<h3>Canal(In Docker)</h3>:
+<h6>MySQL(Local)</h6>:v8.1.0<br>
+<h6>Redis(Local)</h6>:v.3.2.100<br>
+<h6>Docker<h6>: find a suitable version in https://www.docker.com/, you need create a account first.<br>
+<h6>Consul(In Docker)</h6>:
+<h6>Canal(In Docker)</h6>:
 ```
   docker pull canal/canal-server:latest
   docker run -d --name canal-server -p 11111:11111 canal/canal-server
 ```<br>
-<h3>Kafka(In docker)</h3>:
+<h6>Kafka(In docker)</h6>:
 ```
   go get github.com/segmentio/kafka-go
 ```<br>
-<h3>ElasticSearch(In Docker)</h3>:
+<h6>ElasticSearch(In Docker)</h6>:
 ```
   go get github.com/elastic/go-elasticsearch/v8@latest
 ```<br>
