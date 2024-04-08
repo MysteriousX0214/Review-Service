@@ -3,9 +3,13 @@ The project is the modified version of Qimi's online courses. If there is any in
 Course Address： [course address](https://study.163.com/course/courseMain.htm?courseId=1212937804)
 ## QuickView For Codes
 **review-service**:providing Remote Process Calls for users, stores and audits.
+
 **service for users**: not inplemented serperately, http apis and grpc.
+
 **service for shops**: review-b.
+
 **service for audits**: review-o.
+
 ## Necessary Environments:
 ###### Kratos:
   ```
