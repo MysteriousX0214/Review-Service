@@ -1,7 +1,7 @@
-<h1>A backend system for review service using Golang.<h1>
+#A backend system for review service using Golang.
 
-<h2>QuickView For Codes</h2>
-__review-service__:providing Remote Process Calls for users, stores and audits.<br>
+##QuickView For Codes
+**review-service**:providing Remote Process Calls for users, stores and audits.<br>
 **service for users**: not inplemented serperately, http apis and grpc.<br>
 **service for shops**: review-b.<br>
 **service for audits**: review-o.<br>
@@ -19,7 +19,6 @@ __review-service__:providing Remote Process Calls for users, stores and audits.<
   docker pull canal/canal-server:latest
   docker run -d --name canal-server -p 11111:11111 canal/canal-server
 ```
- 
 <h6>Kafka(In docker)</h6>:<br>
 ```
   go get github.com/segmentio/kafka-go
