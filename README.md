@@ -3,12 +3,27 @@ The project is the modified version of Qimi's online courses. If there is any in
 Course Address： [course address](https://study.163.com/course/courseMain.htm?courseId=1212937804)
 ## QuickView For Codes
 **review-service**:providing Remote Process Calls for users, stores and audits.
-
+supported methods:
+- Detailed logics of all methods in **service for users/shops/audits**, http apis and remote process calls are provided.
+ 
 **service for users**: not inplemented serperately, http apis and grpc methods are written in **review-service**.
+supported methods:
+- create review
+- update review
+- delete review
+- see review details
+- see all reviews created by someone
 
 **service for shops**: review-b.
+supported methods:(remote calls in **review-serice**)
+- create for reply
+- update for reply
+- appeal for reply
 
 **service for audits**: review-o.
+supported methods:(remote calls in **review-serice**)
+- audit for reviews
+- audit for appeals
 
 ## Necessary Environments:
 ###### Kratos:
@@ -19,6 +34,12 @@ Course Address： [course address](https://study.163.com/course/courseMain.htm?c
 ###### Redis(Local):v.3.2.100
 ###### Docker: find a suitable version in https://www.docker.com/, you need create a account first.
 ###### Consul(In Docker):
+```
+git clone https://github.com/hashicorp/learn-consul-docker.git
+cd datacenter-deploy-service-discovery
+docker-compose up -d
+```
+or view https://www.liwenzhou.com/posts/Go/consul/ for details
 ###### Canal(In Docker): 
 ```
   docker pull canal/canal-server:latest
