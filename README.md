@@ -40,7 +40,7 @@ supported methods:(remote calls in **review-service**)
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 
 ```
-#### Kratos(Go Environment):
+#### Kratos:
   ```
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
   ```
