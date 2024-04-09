@@ -103,3 +103,8 @@ modify the following settings and save, then canal is able to push changes to ka
 serverMode:kafka
 kafka.bootstrap.servers = host.docker.internal:29092 (your kafka is deployed in docker)
 ```
+#### Configs in project
+Check configs/config.yaml under each service folder (like review-service/configs/config.yaml):
+- You can change the ports of http and grpc service. 
+- Check the address of your MySQL.
+- Keep consul and elasticsearch's address same with containers in Docker.
