@@ -38,7 +38,7 @@ supported methods:(remote calls in **review-service**)
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
   ```
 #### MySQL(Local):v8.1.0
-Suggest to setup data tables in your MySQL first (review_info,review_reply_info and review_appeal_info), see [.sql file](https://github.com/MysteriousX0214/Review-Service/blob/master/review-service/review.sql) for details.  
+Suggest to setup data tables in your MySQL first (review_info,review_reply_info and review_appeal_info), see [.sql file](https://github.com/MysteriousX0214/Review-Service/blob/master/review-service/review.sql) for details. Denote the database ##"review"##. 
 #### Redis(Local):v.3.2.100
 (**unimplemented**) Add cache to redis when querying for reviews.
 #### Docker(Local): 
@@ -82,11 +82,24 @@ Enter Canal Container, execute:
 ```
 vi canal-server/conf/example/instance.properties
 ```
-modify the following settings and save:
+modify the following settings and save, then canal is able to catch changes in database "review":
 ```
 canal.instance.master.address=host.docker.internal:3306 (when MySQL is deployed locally, if it is in Docker, use 127.0.0.1 or localhost instead.)
 canal.instance.tsdb.dbUsername=canal (Extra account created just now)
 canal.instance.tsdb.dbPassword=canal
 canal.instance.dbUsername=root (your main account storing database "review")
 canal.instance.dbPassword=root
+```
+you can also set the topic name of kafka, for examle, put the message from canal(listening "review") to kafka, and set the topic name **example**:
+```
+canal.mq.dynamicTopic=example:review\\..*
+```
+then execute:
+```
+vi canal-server/conf/canal.properties
+```
+modify the following settings and save, then canal is able to push changes to kafka:
+```
+serverMode:kafka
+kafka.bootstrap.servers = host.docker.internal:29092 (your kafka is deployed in docker)
 ```
