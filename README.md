@@ -33,6 +33,13 @@ supported methods:(remote calls in **review-service**)
 ### read messages from kafka into elasticsearch:review-job.
 
 ## Necessary Environments:
+#### Go Environment
+#### Protoc (add into your system PATH): [link](https://github.com/google/protobuf/releases)
+#### Protoc-gen (add into your GOPATH):
+```
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+
+```
 #### Kratos(Go Environment):
   ```
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
