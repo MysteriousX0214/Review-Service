@@ -90,7 +90,7 @@ canal.instance.tsdb.dbPassword=canal
 canal.instance.dbUsername=root (your main account storing database "review")
 canal.instance.dbPassword=root
 ```
-you can also set the topic name of kafka, for examle, put the message from canal(listening "review") to kafka, and set the topic name **example**:
+you can also set the topic name of kafka, for examle, put the message from canal(listening "review") to kafka, and set the topic name such as **example**:
 ```
 canal.mq.dynamicTopic=example:review\\..*
 ```
