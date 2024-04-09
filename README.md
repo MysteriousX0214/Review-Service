@@ -117,7 +117,7 @@ kratos run
 - **review-job** reads from kafka and writes into elasticsearch.
 - **review-service** register all remote process calls to consul
 - **review-b/review-o** discover remote process calls from consul
-- changes in Mysql tables (caused by http or rpc calls) will be captured by canal and pushed to kafka.
+- changes in Mysql tables (caused by http or rpc calls) will be captured by canal and pushed to kafka (if your setting is right in above steps).
 
 ### Check
 - check if the service is available with postman or [swagger editor](https://editor.swagger.io/)
