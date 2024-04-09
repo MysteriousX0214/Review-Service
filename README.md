@@ -68,3 +68,25 @@ See tutorial in [link](https://www.liwenzhou.com/posts/Go/elasticsearch/) to set
 #### Postman(Local,Optional):
 To test if http apis and grpcs works well.
 Find a suitable version in https://www.postman.com/, you may need to create an account for convinent use (like storing a certain http/grpc request route for multiplexing).
+
+## How to run
+### Configs
+#### Extra account named 'canal'(or any name you like) in MySQL to store binlogs from database "review"(storing three data tables mentioned above)
+```
+CREATE USER 'canal'@'localhost' IDENTIFIED BY 'canal';
+GRANT ALL PRIVILEGES ON my_database.* TO 'canal'@'localhost';
+FLUSH PRIVILEGES;
+```
+#### Canal in Docker
+Enter Canal Container, execute:
+```
+vi canal-server/conf/example/instance.properties
+```
+modify the following settings and save:
+```
+canal.instance.master.address=host.docker.internal:3306 (when MySQL is deployed locally, if it is in Docker, use 127.0.0.1 or localhost instead.)
+canal.instance.tsdb.dbUsername=canal (Extra account created just now)
+canal.instance.tsdb.dbPassword=canal
+canal.instance.dbUsername=root (your main account storing database "review")
+canal.instance.dbPassword=root
+```
