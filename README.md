@@ -38,7 +38,7 @@ supported methods:(remote calls in **review-service**)
   go install github.com/go-kratos/kratos/cmd/kratos/v2@latest
   ```
 #### MySQL(Local):v8.1.0
-Suggest to setup data tables in your MySQL first (review_info,review_reply_info and review_appeal_info), see [.sql file](https://github.com/MysteriousX0214/Review-Service/blob/master/review-service/review.sql) for details. Denote the database ##review##. 
+Suggest to setup data tables in your MySQL first (review_info,review_reply_info and review_appeal_info), see [.sql file](https://github.com/MysteriousX0214/Review-Service/blob/master/review-service/review.sql) for details. Denote the database named **review**. 
 #### Redis(Local):v.3.2.100
 (**unimplemented**) Add cache to redis when querying for reviews.
 #### Docker(Local): 
@@ -108,3 +108,17 @@ Check configs/config.yaml under each service folder (like review-service/configs
 - You can change the ports of http and grpc service. 
 - Check the address of your MySQL.
 - Keep consul and elasticsearch's address same with containers in Docker.
+
+### Run
+Execute the following command in the root directory of each folder:
+```
+kratos run
+```
+- **review-job** reads from kafka and writes into elasticsearch.
+- **review-service** register all remote process calls to consul
+- **review-b/review-o** discover remote process calls from consul
+- changes in Mysql tables (caused by http or rpc calls) will be captured by canal and pushed to kafka.
+
+### Check
+- check if the service is available with postman or [swagger editor](https://editor.swagger.io/)
+- see routes and parameters in openapi.yaml under each root directory, like [link](https://github.com/MysteriousX0214/Review-Service/blob/master/review-service/openapi.yaml).
